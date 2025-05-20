@@ -1,6 +1,6 @@
 import { elements } from "./elements";
 
-describe('template spec', () => {
+describe('login', () => {
   beforeEach(() => {
     cy.visit('/');
     cy.get('a[href="#/login"]')

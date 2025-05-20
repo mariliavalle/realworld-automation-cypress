@@ -1,3 +1,21 @@
+import { elements } from "../e2e/login/elements"
+
+Cypress.Commands.add('login', (email, password) => { 
+    cy.get('a[href="#/login"]')
+        .click();
+        
+    cy.get(elements.userEmail)
+        .should('have.attr', 'placeholder', 'Email')
+        .type(email);
+    
+    cy.get(elements.userPassword)
+        .should('have.attr', 'placeholder', 'Password')
+        .type(password);
+    
+    cy.get('.btn')
+        .click();    
+})
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
