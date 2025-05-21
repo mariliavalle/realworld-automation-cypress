@@ -1,4 +1,4 @@
-export const elements = {
+export const articleElements = {
     btnNewArticle: 'a[href="#/editor"]',
     articleTitle: 'input[name="title"]',
     articleDescription: 'input[name="description"]',

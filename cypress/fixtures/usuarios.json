@@ -1,0 +1,27 @@
+{
+    "usuarios": [
+        {
+            "name": "Emma W",
+            "email": "emmaw@email.com",
+            "password": "Teste123"
+        },
+
+        {
+            "name": "Tom F",
+            "email": "tomf@email.com",
+            "password": "Teste1234"
+        },
+
+        {
+            "name": "Rupert G",
+            "email": "rupertg@email.com",
+            "password": "Teste12345"
+        },
+
+        {
+            "name": "Daniel R",
+            "email": "danielr@email.com",
+            "password": "Teste123456"
+        }
+    ]
+}

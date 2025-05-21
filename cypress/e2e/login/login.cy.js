@@ -1,4 +1,4 @@
-import { elements } from "./elements";
+import { elementsLogin } from "./elements";
 
 describe('login', () => {
   beforeEach(() => {
@@ -13,11 +13,11 @@ describe('login', () => {
   })
 
   it('C3 - Login com dados válidos', () => {
-    cy.get(elements.userEmail)
+    cy.get(elementsLogin.userEmail)
         .should('have.attr', 'placeholder', 'Email')
         .type('emmaw@email.com');
     
-    cy.get(elements.userPassword)
+    cy.get(elementsLogin.userPassword)
         .should('have.attr', 'placeholder', 'Password')
         .type('Teste123');
     

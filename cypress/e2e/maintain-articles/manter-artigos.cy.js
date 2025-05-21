@@ -1,4 +1,4 @@
-import { elements } from "./elements";
+import { articleElements } from "./elements";
 
 describe('Manter artigos', () => {
     beforeEach(() => {
@@ -9,22 +9,22 @@ describe('Manter artigos', () => {
     it('C4 - Criar artigo', () => {
         
         //Criação do artigo
-        cy.get(elements.btnNewArticle)
+        cy.get(articleElements.btnNewArticle)
             .click();
         
-        cy.get(elements.articleTitle)
+        cy.get(articleElements.articleTitle)
             .should('have.attr', 'placeholder', 'Article Title')
             .type('New article');
         
-        cy.get(elements.articleDescription)
+        cy.get(articleElements.articleDescription)
             .should('have.attr', 'placeholder', "What's this article about?")
             .type('Cypress');
         
-        cy.get(elements.articleBody)
+        cy.get(articleElements.articleBody)
             .should('have.attr', 'placeholder', 'Write your article (in markdown)')
             .type('Cypress é uma ferramenta de teste de front-end moderna, usada para automação de testes end-to-end em aplicações web.');
 
-        cy.get(elements.articleTags)
+        cy.get(articleElements.articleTags)
             .should('have.attr', 'placeholder', 'Enter tags')
             .type('Automation');
         
@@ -43,7 +43,7 @@ describe('Manter artigos', () => {
         cy.contains('button', 'Global Feed')
             .click();
         
-        cy.get(elements.articlePreview)
+        cy.get(articleElements.articlePreview)
             .should('have.length', 1);
         
         // Editando artigo
@@ -53,7 +53,7 @@ describe('Manter artigos', () => {
         cy.contains('button', 'Edit Article')
             .click();
         
-        cy.get(elements.articleTitle)
+        cy.get(articleElements.articleTitle)
             .clear()
             .type('Automation with Cypress');
         
